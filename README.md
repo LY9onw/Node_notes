@@ -27,8 +27,6 @@ Node_notes
 
 >- 链式流: 链式流是通过连接输出流到另外一个流并创建多个流操作链的机制 链式流一般用于管道操作
 
------------------------------
-
 ## Node.Js 加载模块的方式
 
 ### 从文件模块缓存中加载
@@ -45,3 +43,23 @@ Node_notes
 >- 当文件模块缓存中不存在，而且不是原生模块的时候，Node.js 会解析 require 方法传入的参数，并从文件系统中加载实际的文件
 
 ------------------2018.05.08 YoliLin
+
+### __filename
+
+>- __filename 表示当前正在执行的脚本的文件名。它将输出文件所在位置的绝对路径，且和命令行参数所指定的文件名不一定相同。 如果在模块中，返回的值是模块文件的路径
+
+### __dirname
+
+>- __dirname 表示当前执行脚本所在的目录
+
+### setTimeout(cb, ms)
+
+>- setTimeout(cb, ms) 全局函数在指定的毫秒(ms)数后执行指定函数(cb)。：setTimeout() 只执行一次指定函数 返回一个代表定时器的句柄值
+
+### clearTimeout(t)
+
+>- clearTimeout( t ) 全局函数用于停止一个之前通过 setTimeout() 创建的定时器。 参数 t 是通过 setTimeout() 函数创建的定时器
+
+### setInterval(cb, ms)
+
+>- setInterval(cb, ms) 全局函数在指定的毫秒(ms)数后执行指定函数(cb) 返回一个代表定时器的句柄值。可以使用 clearInterval(t) 函数来清除定时器 setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭
